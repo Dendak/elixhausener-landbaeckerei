@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { externalLinks } from "@/lib/links";
 
 const navItems = [
   { href: "/sortiment", label: "Sortiment" },
   { href: "/filialen", label: "Filialen" },
+  { href: "/cafe", label: "Café" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -37,22 +39,20 @@ export default function Header() {
             </svg>
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-lg font-semibold text-ink">
-              Elixhausener
-            </span>
+            <span className="font-serif text-lg font-semibold text-ink">Elixhausener</span>
             <span className="text-xs uppercase tracking-[0.18em] text-crust-700">
               Landbäckerei
             </span>
           </span>
         </Link>
 
-        <nav className="hidden md:block" aria-label="Hauptnavigation">
-          <ul className="flex items-center gap-2">
+        <nav className="hidden lg:block" aria-label="Hauptnavigation">
+          <ul className="flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:bg-crust-100 hover:text-ink"
+                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink/80 transition hover:bg-crust-100 hover:text-ink"
                 >
                   {item.label}
                 </Link>
@@ -61,7 +61,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex lg:items-center lg:gap-2">
           <a href="tel:+43662480421" className="btn-primary text-xs">
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z" />
@@ -72,7 +72,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="md:hidden rounded-full border border-crust-300 p-2.5 text-ink"
+          className="rounded-full border border-crust-300 p-2.5 text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label="Menü öffnen"
@@ -89,7 +89,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="md:hidden border-t border-crust-200 bg-flour">
+        <div id="mobile-nav" className="border-t border-crust-200 bg-flour lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4" aria-label="Mobile Navigation">
             {navItems.map((item) => (
               <Link
@@ -101,9 +101,29 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <div className="mt-2 grid grid-cols-2 gap-2 border-t border-crust-200 pt-3">
+              <a
+                href={externalLinks.speisekarte}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="rounded-xl bg-crust-100 px-3 py-2.5 text-center text-xs font-medium text-crust-900"
+              >
+                📄 Speisekarte
+              </a>
+              <a
+                href={externalLinks.getraenkekarte}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="rounded-xl bg-crust-100 px-3 py-2.5 text-center text-xs font-medium text-crust-900"
+              >
+                ☕ Getränkekarte
+              </a>
+            </div>
             <a
               href="tel:+43662480421"
-              className="mt-2 btn-primary"
+              className="btn-primary mt-2"
               onClick={() => setOpen(false)}
             >
               Jetzt anrufen

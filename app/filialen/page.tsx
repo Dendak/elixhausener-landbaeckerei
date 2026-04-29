@@ -33,9 +33,10 @@ export default function FilialenPage() {
                 <div className="relative aspect-square md:aspect-auto bg-crust-100">
                   <iframe
                     src={store.mapEmbedUrl}
-                    title={`Karte: ${store.name}`}
-                    className="absolute inset-0 h-full w-full"
+                    title={`Google Maps: ${store.name}`}
+                    className="absolute inset-0 h-full w-full border-0"
                     loading="lazy"
+                    allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>

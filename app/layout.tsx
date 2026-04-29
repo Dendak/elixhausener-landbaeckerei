@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCallBar from "@/components/MobileCallBar";
 import "./globals.css";
 
 const inter = Inter({
@@ -81,8 +82,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Zum Hauptinhalt springen
         </a>
         <Header />
-        <main id="main">{children}</main>
+        <main id="main" className="pb-20 lg:pb-0">{children}</main>
         <Footer />
+        <MobileCallBar />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(bakeryJsonLd) }}

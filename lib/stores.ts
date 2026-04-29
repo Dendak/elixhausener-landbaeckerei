@@ -46,9 +46,9 @@ export const stores: Store[] = [
     email: "landbaeckerei@dialog-gruppe.at",
     hours: range({ open: "07:00", close: "10:00" }, { open: "07:00", close: "10:00" }),
     highlight: "Unsere Backstube – hier entsteht alles ganz frisch in der Früh.",
-    mapsUrl: "https://maps.google.com/?q=Tiefenbachstra%C3%9Fe+39,+5161+Elixhausen",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Tiefenbachstra%C3%9Fe+39%2C+5161+Elixhausen",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=13.064%2C47.864%2C13.084%2C47.876&layer=mapnik&marker=47.870%2C13.074",
+      "https://maps.google.com/maps?q=Tiefenbachstra%C3%9Fe+39%2C+5161+Elixhausen&hl=de&z=16&output=embed",
     description:
       "Im Herzen von Elixhausen wird seit Generationen Brot in handwerklicher Tradition gebacken. Frühaufsteher bekommen hier die ersten Laibe direkt aus dem Ofen.",
   },
@@ -62,9 +62,9 @@ export const stores: Store[] = [
     phone: ["+43 681 84516049", "+43 662 4804215"],
     hours: range({ open: "06:00", close: "18:00" }, { open: "06:30", close: "12:00" }),
     highlight: "Unser Café im Stadtteil Itzling – mit gemütlichem Sitzbereich.",
-    mapsUrl: "https://maps.google.com/?q=Itzlinger+Hauptstra%C3%9Fe+14,+5020+Salzburg",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Itzlinger+Hauptstra%C3%9Fe+14%2C+5020+Salzburg",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=13.030%2C47.815%2C13.050%2C47.827&layer=mapnik&marker=47.821%2C13.040",
+      "https://maps.google.com/maps?q=Itzlinger+Hauptstra%C3%9Fe+14%2C+5020+Salzburg&hl=de&z=16&output=embed",
     description:
       "Mitten in Salzburg-Itzling: das ganze Sortiment, dazu Kaffeespezialitäten und ein gemütlicher Frühstücksplatz für unterwegs.",
   },
@@ -79,9 +79,9 @@ export const stores: Store[] = [
     hours: range({ open: "06:30", close: "13:00" }, { open: "06:30", close: "12:00" }),
     isNew: true,
     highlight: "Unsere neueste Filiale – herzlich willkommen!",
-    mapsUrl: "https://maps.google.com/?q=Marienweg+6,+5113+St.+Georgen",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Marienweg+6%2C+5113+St.+Georgen+bei+Salzburg",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=12.870%2C48.000%2C12.890%2C48.012&layer=mapnik&marker=48.006%2C12.880",
+      "https://maps.google.com/maps?q=Marienweg+6%2C+5113+St.+Georgen+bei+Salzburg&hl=de&z=16&output=embed",
     description:
       "Unser neuester Standort: ein heller, moderner Laden mit dem vollen Sortiment für die Region Innviertel und Oberösterreich.",
   },
@@ -94,9 +94,9 @@ export const stores: Store[] = [
     city: "Ostermiething",
     phone: ["+43 664 75056967", "+43 6278 621413"],
     hours: range({ open: "07:00", close: "13:30" }, { open: "07:00", close: "12:00" }),
-    mapsUrl: "https://maps.google.com/?q=Gewerbegebiet+1,+5121+Ostermiething",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Gewerbegebiet+1%2C+5121+Ostermiething",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=12.880%2C48.064%2C12.900%2C48.076&layer=mapnik&marker=48.070%2C12.890",
+      "https://maps.google.com/maps?q=Gewerbegebiet+1%2C+5121+Ostermiething&hl=de&z=16&output=embed",
     description:
       "Im Gewerbegebiet Ostermiething: praktisch zum schnellen Einkauf am Weg zur Arbeit – mit der gleichen Qualität wie in der Backstube.",
   },
