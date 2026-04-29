@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #f9f5ef;
+    --color-ink: #1a1410;
+    --color-muted: #6b5d4f;
+    --color-accent: #9c632a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-feature-settings: "ss01", "ss02";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #cf9a4a;
+    color: #1a1410;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-crust-700 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-flour transition hover:bg-crust-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-crust-400 focus-visible:ring-offset-2 focus-visible:ring-offset-flour;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-crust-700 bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-wider text-crust-800 transition hover:bg-crust-700 hover:text-flour focus:outline-none focus-visible:ring-2 focus-visible:ring-crust-400;
+  }
+
+  .heading-display {
+    @apply font-serif text-4xl leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  .heading-section {
+    @apply font-serif text-3xl leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-crust-700;
+  }
+}
+
+@layer utilities {
+  .grain {
+    background-image:
+      radial-gradient(
+        circle at 1px 1px,
+        rgba(60, 35, 15, 0.08) 1px,
+        transparent 0
+      );
+    background-size: 24px 24px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
